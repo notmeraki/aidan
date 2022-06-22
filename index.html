@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> aidan - front end developer </title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- home page -->
+        <div class="container" id="home">
+
+            <!-- header -->
+            <header>
+                <a href="#" class="logo"> aidan </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="#home"> home </a></li>
+                        <li><a href="#work"> work </a></li>
+                        <li><a href="#aboutme"> about </a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- hero section -->
+            <section class="hero">
+                <h1> hi, my <br> name is <span> aidan. </span> </h1>
+
+                <p class="subheading"> i'm a <b> front end developer </b> from <br> canberra, australia.</p>
+            </section>
+
+            <!-- arrow -->
+            <div class="arrow">
+                <a href="#work"><img src="resources/down-arrow.svg" alt="down arrow"></a>
+            </div>
+
+        </div>
+
+        <!-- work section -->
+        <div class="container1" id="work">
+
+            <h1> work - coming soon </h1>
+
+        </div>
+
+        <!-- about me section -->
+        <div class="container2" id="aboutme">
+
+            <h1> about me - coming soon </h1>
+
+        </div>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+
+            let tl = gsap.timeline({ defaults: { ease: Expo.easeOut, duration: 1.5 }});
+
+            tl.from(".hero h1", { opacity: 0, y: 200, delay: 0.5 })
+            tl.from(".subheading", { y: 25, opacity: 0 }, "-=1" )
+            tl.from(".logo", { y: -200 }, "-=2" )
+            tl.from("nav", { y: -200 }, "-=1.5" )
+            tl.from(".arrow", { y: 25, opacity: 0 }, "-=1" )
+
+        </script>
+        
+    </body>
+</html>
